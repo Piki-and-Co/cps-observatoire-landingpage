@@ -6,13 +6,6 @@ Site vitrine pour le premier Observatoire National des Compétences Psychosocial
 
 Le site est hébergé via **GitHub Pages** avec un sous-domaine personnalisé `observatoire.piki-and-co.com`.
 
-### Configuration DNS (OVH)
-
-Ajouter un enregistrement CNAME dans la zone DNS de `piki-and-co.com` :
-
-- Sous-domaine : `observatoire`
-- Cible : `<username>.github.io.`
-
 ## Stack
 
 - HTML/CSS statique (pas de framework)
