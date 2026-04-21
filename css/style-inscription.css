@@ -6,6 +6,7 @@
 }
 
 body {
+    /*font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;*/
 	font-family:"Montserrat-Regular", sans-serif;
     line-height: 1.6;
     color: var(--white);
@@ -16,7 +17,7 @@ body {
 }
 
 @font-face {
-  font-family: 'Montserrat-Regular';
+  font-family: 'Montserrat-Regular'; /* Nom que vous utiliserez dans votre CSS */
   src: url('../assets/fonts/Montserrat-Regular.woff2') format('woff2'),
   url('../assets/fonts/Montserrat-Regular.woff') format('woff'),
   url('../assets/fonts/Montserrat-Regular.otf') format('otf');
@@ -25,7 +26,7 @@ body {
 }
 
 @font-face {
-  font-family: 'Caveat Brush';
+  font-family: 'Caveat Brush'; /* Nom que vous utiliserez dans votre CSS */
   src: url('../assets/fonts/caveatbrush-regular.woff2') format('woff2'),
   url('../assets/fonts/caveatbrush-regular.woff') format('woff'),
   url('../assets/fonts/caveatbrush-regular.ttf') format('ttf');
@@ -48,7 +49,7 @@ body {
 nav {
     background: var(--light-purple);
     backdrop-filter: blur(0.625rem);
-    padding: 0 1.2rem;
+    padding: 0 1.2rem 0 1.2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -59,7 +60,7 @@ nav {
 
 .navbar{
     position: fixed;
-    top: 0;
+    top:0rem;
     width: 100%;
 	transition: top 0.3s;
 }
@@ -71,17 +72,18 @@ nav {
 }
 
 .logo img{
-    height: 3.75rem;
+    height: 3.75rem; 
 }
 
 .btn-nav {
-    background: var(--dark-yellow);
+    background:var(--dark-yellow);
+    background-size: cover;
     color: black !important;
     padding: 0.7rem 1.5rem;
     border-radius: 0.5rem;
     text-decoration: none;
     font-weight: 600;
-	font-size: 1.5rem;
+	font-size:1.5rem;
     transition: all 0.3s;
     border: none;
     cursor: pointer;
@@ -89,7 +91,7 @@ nav {
 }
 
 .btn-nav:hover {
-	background: var(--light-yellow);
+	background:var(--light-yellow);
     transform: translateY(-0.125rem);
     box-shadow: 0 0.625rem 1.563rem rgba(249, 178, 51, 0.3);
 }
@@ -110,19 +112,20 @@ nav {
     text-align: center;
 }
 
-.container {
-    max-width: 75rem;
-    margin: 0 auto;
-    padding: 2.5rem 5%;
-	justify-items: center;
-}
-
 .section-heading {
     text-align: center;
     font-family: "Montserrat-Regular", sans-serif;
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 3rem;
+}
+
+
+.container {
+    max-width: 75rem;
+    margin: 0 auto;
+    padding: 2.5rem 5%;
+	justify-items:center;
 }
 
 .section-title {
@@ -135,155 +138,9 @@ nav {
     letter-spacing: 0.094rem;
 }
 
-#error-message{
-	font-size: 16px;
-	text-align: left;
-    font-family: "Montserrat-Regular", sans-serif;
-	color: #661d1d;
-	background-color: #ffeded;
-	border-radius: 3px;
-	border-color: #ff4949;
-	max-width: 540px;
-}
-
-#success-message{
-	font-size: 16px;
-	text-align: left;
-	font-family: Helvetica, sans-serif;
-	color: #085229;
-	background-color: #e7faf0;
-	border-radius: 3px;
-	border-color: #13ce66;
-	max-width: 540px;
-}
-
-#sib-form-container{
-	display: flex;
-}
-
-#sib-container{
-	text-align: center;
-	background-color: rgba(255,255,255,1);
-	max-width: 540px;
-	border-radius: 3px;
-	border-width: 1px;
-	border-color: #C0CCD9;
-	border-style: solid;
-	direction: ltr;
-}
-
-#sib-container input:-ms-input-placeholder {
-    text-align: left;
-    font-family: "Montserrat-Regular", sans-serif;
-    color: #c0ccda;
-}
-
-#sib-container input::placeholder {
-    text-align: left;
-    font-family: "Montserrat-Regular", sans-serif;
-    color: #c0ccda;
-}
-
-#sib-container textarea::placeholder {
-    text-align: left;
-    font-family: "Montserrat-Regular", sans-serif;
-    color: #c0ccda;
-}
-
-#sib-container a {
-    text-decoration: underline;
-    color: #2BB2FC;
-}
-
-#form-title{
-	font-size: 2rem;
-	text-align: center;
-	font-weight: 700;
-	font-family: "Caveat Brush", cursive;
-	color: #3C4858;
-	background-color: transparent;
-	padding: 0.5rem 0;
-}
-
-.explicative-text{
-	padding: 0.5rem 0;
-	font-size: 1rem;
-	text-align: left;
-	font-family: "Montserrat-Regular", sans-serif;
-	color: #3C4858;
-	background-color: transparent;
-}
-
-.opt-in-text{
-	font-size: 1rem;
-	text-align: left;
-	font-family: "Montserrat-Regular", sans-serif;
-	color: #3C4858;
-	background-color: transparent;
-}
-
-.spec-text{
-	font-size: 0.75rem;
-	text-align: left;
-	font-family: "Montserrat-Regular", sans-serif;
-	display: inline-block;
-	margin: 0.5rem 0;
-	color: #8390A4;
-}
-
-button{
-	font-size: 2rem;
-	text-align: left;
-	font-weight: 700;
-	font-family: "Caveat Brush", cursive;
-	color: #FFFFFF;
-	background-color: #3E4857;
-	border-radius: 3px;
-	border-width: 0px;
-	display: inline-block;
-	padding: 0.5rem 2rem;
-	border: none;
-	overflow-wrap: break-word;
-	max-width: 100%;
-	cursor: pointer;
-}
-
-label{
-	font-weight: 700;
-	font-size: 1.5rem;
-	text-align: left;
-	font-family: "Montserrat-Regular", sans-serif;
-	color: #3c4858;
-	padding: 0;
-	cursor: pointer;
-}
-
-label[data-required]::after {
-    content: attr(data-required);
-    color: red;
-    margin-left: 0.25rem;
-    font-weight: bold;
-}
-
-.input-text{
-	line-height: 2rem;
-	width: calc(100%);
-}
-
-.entry-field{
-	align-items: center;
-	background: #fff;
-	border: 1px solid #c0ccda;
-	display: inline-flex;
-	margin: 0.25rem 0;
-	max-width: 100%;
-	border-radius: 0.5rem;
-	overflow: hidden;
-}
-
 /* Footer */
 footer {
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><defs><linearGradient id="footGrad" x1="0%25" y1="0%25" x2="100%25" y2="100%25"><stop offset="0%25" style="stop-color:rgb(15,23,42);stop-opacity:1" /><stop offset="100%25" style="stop-color:rgb(30,41,59);stop-opacity:1" /></linearGradient></defs><rect width="1200" height="400" fill="url(%23footGrad)"/></svg>');
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400"><defs><linearGradient id="footGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:rgb(15,23,42);stop-opacity:1" /><stop offset="100%" style="stop-color:rgb(30,41,59);stop-opacity:1" /></linearGradient></defs><rect width="1200" height="400" fill="url(%23footGrad)"/></svg>');
     background-size: cover;
     color: #94a3b8;
     text-align: center;
@@ -292,36 +149,32 @@ footer {
 .footer-socials {
 	display: flex;
     gap: 0.5rem;
-  	justify-content: flex-end;
+  	justify-content: flex-end; /* Aligne le contenu à droite */
   	padding: 1.25rem;
 }
 
 .footer-socials img {
-  margin-left: 1rem;
-  height: 3rem;
+  margin-left: 1rem; /* Espace entre les images */
+  height: 3rem;      /* Taille de vos icônes */
 }
 
 footer p {
     margin-bottom: 1rem;
 }
 
-footer a {
-    color: #94a3b8;
-}
+footer img {
 
-footer a:hover {
-    color: #ffffff;
 }
 
 .footer-three-column {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 0.5fr 0.5fr 0.5fr;
     gap: 2rem;
     align-items: center;
-    margin: 0;
-	justify-items: center;
-	justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 1rem 2rem;
+    margin: 0rem 0;
+	justify-items:center;
+	justify-content:center;
+    margin-left:auto;
+    margin-right:auto;
 }
+
